@@ -1,9 +1,12 @@
+import java.util.Arrays;
 
 public class ShuffleTheArray1470 {
 
 	public static void main(String[] args) {
 		int[] array = {2,5,1,3,4,7};
 		int number = 3;
+		
+		System.out.println(Arrays.toString(shuffle(array,number)));
 
 	}
 	
@@ -20,13 +23,14 @@ public class ShuffleTheArray1470 {
 		//Create an array and assign memory to it
 		int[] ans = new int[nums.length]; 
 		
-		for(int i = 0; i<= nums.length/2; i++){
+		for(int i = 0; i<= nums.length/2 - 1; i++){
 			
-			
+			ans[2*i] = nums[i];
+			ans[2*i+1] = nums[n+i];
 		}
 		
 		
-		return nums;
+		return ans;
 		
 	}
 
